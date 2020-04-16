@@ -6,6 +6,8 @@ const app=express();
 const {db}=require("./db")
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+var PORT = process.env.PORT || 3000
+
 app.use(express.static(__dirname+ "/Public"))
 app.use("/todo",todoroute)
 
@@ -14,7 +16,7 @@ app.use("/todo",todoroute)
 
 db.sync()
  .then((
-    app.listen(port)
+    app.listen(PORT)
 
  ))
  .catch((err)=>
