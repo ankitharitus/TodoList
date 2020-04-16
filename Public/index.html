@@ -2,15 +2,75 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script async defer  src="script.js"></script>
-    </head>
-    <body>
-        <h1>To Do List</h1>
-        <label for="task">Title</label>
-        <input type="text" id="task" name="task">
-        <label for="done">Status</Title></label>
-        <input type ="text" id="done" name="done">
-        <button type="submit" id="submit">AddTask</button>
+        
+     
+       
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body >
+        <div id="heading"> <h1 style="font-size: 80px;"><span style=color:darkred;>To</span><span style="color: chartreuse;">Do</span> App</h1></div>
+       <div class="row">
+<div class="col testing">
+
+</div>
+        <div class="form col">
+     
+         <form id="formdata" action="http://localhost:7235/todo" method="POST">
+            <div>
+        <label for="task" style="font-size: 30px; color:darkred; margin-right: 120px;">Title</label>
+        <input style="width: 200px;" type="text" id="task" name="task">
+       </div>
+       <div>
+        <label for="due" style="font-size: 30px; color:darkred;margin-right: 55px;">Due Date</label>
+        <input style="width: 195px;"type ="date" id="due" name="due">
+        </div>
+        <div>
+        <label for="description" style="font-size: 30px; color:darkred;margin-right: 30px;">Description</label>
+        <input style="width: 195px;" type="text" id="description" name="description">
+        </div>
+        <div>
+        <label for="priorty" style="font-size: 30px; color:darkred;margin-right: 80px;">Priority</label>
+        <input type ="radio" id="priority" name="priority" value="High">
+        <label for="priority" style="font-size: 20px;" >High</label>
+        <input type ="radio" id="priority" name="priority" value="Medium">
+        <label for="priority" style="font-size: 20px;">Medium</label>
+        <input type ="radio" id="priority" name="priority" value="Low">
+        <label for="priority"style="font-size: 20px;" >Low</label>
+        </div>
+       
+        <button type="submit" id="submit1"style="font-size:23px;margin-top:20px; margin-left:120px;">AddTask</button>
+    </form> 
+        </div>
+       </div>
+        <div class="editfor">
+
+        </div>
+       
+   
+    <div>
+        <button type="submit" id="b1">DateAscending</button>
+        <button type="submit" id="b2">DateDescending</button>
+        <button type="submit" id="b3">SortByPriority</button>
+        <button type="submit" id="b4">SortByStatus</button>
+    </div>
+       \
+    <div id="left-column">
+    <div class="accordion" id="accordionExample">
+<div id="cardbody">
+</div>
+</div>
+    </div>
+    </div>
+    
     </body>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>

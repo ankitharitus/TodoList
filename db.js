@@ -15,9 +15,10 @@ const todo=db.define('todo',{
         allowNull:false
     },
     done:{
-        type:sequelize.BOOLEAN,
+        type:sequelize.STRING,
         allowNull:false,
-        defaultValue:false
+        defaultValue:'incomplete'
+        
 
     },
     due:{
@@ -33,19 +34,7 @@ const todo=db.define('todo',{
 
 })
 
-const notess=db.define("notess",{
 
-    note:{
-        type:sequelize.STRING
-    },
-    noteid:{
-        type:sequelize.INTEGER,
-        primaryKey:true,
-        autoIncrement:true
-
-
-    }
-})
 const notes=db.define("notes",{
 
     note:{

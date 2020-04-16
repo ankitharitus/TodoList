@@ -25,14 +25,7 @@ route.get("/:id",async(req,res)=>{
 }
 )
 route.post("/",async(req,res)=>{
-    if (typeof req.body.task!=='string'){
-        console.log(typeof(req.body.task))
-        res.send({
-            error:"Not a string type"
-            
-            
-        })
-    }
+    
     if (typeof (req.body.status=="true")){
        req.body.status="true"
     }
@@ -50,7 +43,7 @@ route.post("/",async(req,res)=>{
     })
    
         
-    res.send({sucess:"succesfully added", id: newtodo.id})
+    res.status(200).send("ok")
 })
 
 route.get("/:id/notes",async(req,res)=>{
@@ -74,7 +67,7 @@ route.post("/:id/notes",async(req,res)=>{
             task:req.body.task,
             done:req.body.done,
             due:req.body.due,
-            description:req.body.description,
+           
             priority:req.body.priority
         }, {
             where: {id: Id}
